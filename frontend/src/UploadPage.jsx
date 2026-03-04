@@ -1,5 +1,6 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import axios from "axios";
+import UploadForm from "./UploadForm";
 
 export default function UploadPage(){
   const [health, setHealth] = useState(null);
@@ -15,8 +16,12 @@ export default function UploadPage(){
 
   return (
     <div>
-      <button onClick={checkHealth}>Check Backend Health</button>
-      <pre>{health}</pre>
+      <div style={{ marginBottom: 12 }}>
+        <button onClick={checkHealth}>Check Backend Health</button>
+        <pre>{health}</pre>
+      </div>
+
+      <UploadForm />
     </div>
   );
 }
